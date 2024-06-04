@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'AgroIndo') }}</title>
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -32,16 +32,16 @@
                     <a href="/profile" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
                         <p>Profil</p>
                     </a>
-                    <a href="/" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
+                    <a href="/dashboard" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
                         <p>Dashboard</p>
                     </a>
-                    <a href="/" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
+                    <a href="/home" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
                         <p>Our Products</p>
                     </a>
-                    <a href="/" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
+                    <a href="/contact-us" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
                         <p>Contact Us</p>
                     </a>
-                    <a href="/logout" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 text-red-600 hover:bg-red-100">
+                    <a href="/" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 text-red-600 hover:bg-red-100">
                         <p>Logout</p>
                     </a>
                 </div>
@@ -76,22 +76,22 @@
             <!-- Second column -->
             <div class="flex items-center justify-center space-x-12">
                 <div>
-                    <i class="fa fa-telegram" style="font-size:56px"></i>
+                    <a href="https://t.me/6282337458131?text=Hi,20%i20%want20%to20%buy." class="fa fa-telegram" style="font-size:56px"></a>
                 </div>
                 <div>
-                    <i class="fa fa-whatsapp" style="font-size:56px"></i>
+                    <a href="https://wa.me/6282337458131?text=Hi,20%i20%want20%to20%buy." class="fa fa-whatsapp" style="font-size:56px"></a>
                 </div>
                 <div>
-                    <i class="fa fa-instagram" style="font-size:56px"></i>
+                    <a href="https://instagram.com/agroindo.id" class="fa fa-instagram" style="font-size:56px"></a>
                 </div>
             </div>
     
             <!-- Third column -->
             <div class="items-center justify-center space-y-6 ml-28">
                 <h5 class="text-2xl font-bold">In Corporation With</h5>
-                <div class="flex gap-4 text-wrap items-center">
-                    <img src="/assets/CartractLogo.png" alt="" style="width: ">
-                </div>
+                <a href="https://cartrack.id" class="flex gap-4 text-wrap items-center">
+                    <img src="/assets/CartractLogo.png" alt="CarTrack" style="width: ">
+                </a>
             </div>
             
             <!-- Fourth column (optional) -->
@@ -103,7 +103,7 @@
         <hr class="my-6">
         <div class="container mx-auto">
             <div class="flex flex-col items-center">
-                <p class="text-sm text-center">Copyright &copy; 2024 AGROINDO- Moneh Team</p>
+                <p class="text-sm text-center">Copyright &copy; 2024 AGROINDO- Kelompok 2</p>
             </div>
         </div>
     </footer>

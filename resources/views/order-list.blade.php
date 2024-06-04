@@ -51,10 +51,10 @@
                 </div>
                 <p class="text-lg font-semibold text-gray-800">$<span id="total2">15.00</span></p>
             </div>
-        </div>
+        </div>        
+        <p class="text-right text-2xl font-bold text-gray-800">Total: $<span id="grandTotal">25.00</span></p>
         <div class="mt-6 text-right mb-6">
-            <p class="text-2xl font-bold text-gray-800">Total: $<span id="grandTotal">25.00</span></p>
-            <button class="mt-4 px-6 py-2 bg-[#2E3D2A] text-white font-semibold rounded-lg shadow-md ">Payment</button>
+            <a type="button" href="/order-confirmation" class="mt-4 px-6 py-2 bg-[#2E3D2A] text-white font-semibold rounded-lg shadow-md">Payment</a>
         </div>
     </div>
 
