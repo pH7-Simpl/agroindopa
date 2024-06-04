@@ -103,7 +103,7 @@
         <hr class="my-6">
         <div class="container mx-auto">
             <div class="flex flex-col items-center">
-                <p class="text-sm text-center">Copyright &copy; 2024 AGROINDO- Kelompok 2</p>
+                <p class="text-sm text-center">Copyright &copy; 2024 AGROINDO - Kelompok 2</p>
             </div>
         </div>
     </footer>
