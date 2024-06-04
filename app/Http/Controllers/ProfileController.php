@@ -57,4 +57,18 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function deleteUser(Request $request)
+    {
+        // Check user authentication (already ensured by middleware)
+        $user = Auth::user();
+
+        // Add a confirmation step before deletion (optional)
+        // ...
+
+        $user->delete();
+
+        // Redirect to a success or error page
+        return redirect('/')->with('message', 'User deleted successfully');
+    }
 }

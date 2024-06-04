@@ -7,6 +7,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/profil', function () {
+    return view('profil');
+});
+
+Route::get('/edit-profile', function () {
+    return view('edit');
+});
+
+Route::get('/delete-user', function () {
+    return view('profile/partials/delete-user-form');
+});
+
+Route::post('/delete-user', 'UserController@deleteUser')->middleware('auth');
+
 Route::get('/contact', function () {
     return view('contact-us');
 });
