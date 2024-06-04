@@ -57,12 +57,4 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
-
-    public function yourControllerMethod()
-    {
-        // Your logic to determine $isScrolled
-        $isScrolled = false; // Or false, depending on your logic
-        $isOpen = false; // or true, based on your logic
-        return view('home', compact('isScrolled','isOpen'));
-    }
 }

@@ -1,5 +1,7 @@
    body {
+        height: 100%;
        margin: 0;
+       
    }
 
    .nav {
@@ -37,7 +39,7 @@
    }
 
    .bg-AboutPict1 {
-    background-image: url('/assets/AboutSpicesPict1.jpg');
+       background-image: url('/assets/AboutSpicesPict1.jpg');
        background-size: cover;
        background-position: top;
        background-repeat: no-repeat;
@@ -45,7 +47,7 @@
    }
 
    .bg-AboutPict2 {
-    background-image: url('/assets/AboutSpicesPict2.jpg');
+       background-image: url('/assets/AboutSpicesPict2.jpg');
        background-size: cover;
        background-position: bottom;
        background-repeat: no-repeat;
@@ -68,7 +70,9 @@
        background-image: url('/assets/AgroIndoLogoTEXT.png');
    }
 
-
+   .a-agroindologo1 {
+    background-image: url('/assets/AgroIndoLogo.png');
+}
 
    .navbar-button {
        color: #F8FAE5;
@@ -77,3 +81,18 @@
    .hero-text {
        color: #F8FAE5;
    }
+
+   .bg-image-auth {
+       background-image: url('/assets/Auth-Bg.png');
+       background-position: center center;
+       background-repeat: no-repeat;
+       background-size: cover;
+   }
+
+   .bg-image-landing {
+    background-image: url('/assets/Background.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
