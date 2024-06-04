@@ -23,17 +23,27 @@
                 </a>
             </div>
     
-            <div class="relative">
-                <button onclick="toggleDropdown()" class="flex items-center focus:outline-none">
-                    <span class="ml-2">Mr.X</span>
-                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div id="dropdownMenu" class="absolute right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg z-10 hidden">
-                    <a href="/profile" class="block px-4 py-2 hover:bg-gray-200">Profile</a>
-                    <a href="/settings" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
-                    <a href="/logout" class="block px-4 py-2 hover:bg-gray-200">Logout</a>
+            <div class="flex gap-2 items-center justify-end cursor-pointer" onclick="toggleDropdown()">
+                <div class="flex flex-col">
+                    <p class="font-bold">Mr. X</p>
+                </div>
+                <i data-lucide="chevron-down"></i>
+                <div id="dropdown" class="hidden absolute top-20 bg-[#F8FAE5] border border-neutral-300 rounded-md shadow-lg z-10 text-black">
+                    <a href="/profile" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
+                        <p>Profil</p>
+                    </a>
+                    <a href="/" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
+                        <p>Dashboard</p>
+                    </a>
+                    <a href="/" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
+                        <p>Our Products</p>
+                    </a>
+                    <a href="/" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
+                        <p>Contact Us</p>
+                    </a>
+                    <a href="/logout" class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 text-red-600 hover:bg-red-100">
+                        <p>Logout</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -103,5 +113,15 @@
       <script>
           lucide.createIcons();
       </script>
+
+        <script>
+            function toggleDropdown() {
+                var dropdown = document.getElementById("dropdown");
+                var caret = document.getElementById("caret");
+
+                dropdown.classList.toggle("hidden");
+                caret.classList.toggle("rotate-180");
+            }
+        </script>
 </body>
 </html>

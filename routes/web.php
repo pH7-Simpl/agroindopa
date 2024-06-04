@@ -27,6 +27,10 @@ Route::get('/order-confirmation', function () {
     return view('order-confirm');
 });
 
+Route::get('/contact-us', function () {
+    return view('contact-us-login');
+});
+
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
