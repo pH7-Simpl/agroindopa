@@ -58,10 +58,15 @@
                         class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 hover:bg-[#d8dac7]">
                         <p>Contact Us</p>
                     </a>
-                    <a href="/"
-                        class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 text-red-600 hover:bg-red-100">
-                        <p>Logout</p>
-                    </a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <a :href="route('logout')"
+                            class="flex justify-start items-center py-3 pl-4 pr-6 gap-4 text-red-600 hover:bg-red-100"
+                            onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                    </form>
                 </div>
             </div>
         </div>
