@@ -1,6 +1,5 @@
 @extends('layout')
 
-@section('content')
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,92 +15,78 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-
-    <style>
-        .profile-container {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .profile-img {
-            border-radius: 50%;
-            max-width: 150px;
-        }
-
-        .profile-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #2E3D2A;
-            color: #fff;
-            font-weight: 600;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 10px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .profile-btn:hover {
-            background-color: #1f2a1c;
-        }
-
-        .delete-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #e3342f;
-            color: #fff;
-            font-weight: 600;
-            border-radius: 5px;
-            text-align: center;
-            margin-top: 10px;
-            text-decoration: none;
-            transition: background-color 0.3s ease;
-        }
-
-        .delete-btn:hover {
-            background-color: #cc1f1a;
-        }
-
-        .profile-info ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .profile-info ul li {
-            padding: 5px 0;
-            font-size: 18px;
-        }
-
-        .profile-info ul li strong {
-            font-weight: 600;
-        }
-    </style>
 </head>
 
 <body class="bg-[#F8FAE5]">
+    @section('content')
     <div class="container mx-auto px-4 py-8">
-        <div class="profile-container">
-            <h1 class="text-3xl font-bold mb-6">My Profile</h1>
-            <div class="flex flex-col md:flex-row gap-4">
-                <div class="w-full md:w-1/3 text-center md:text-left">
-                    <img src="{{ asset('images/profile.jpg') }}" alt="Profile Picture" class="profile-img mb-4 mx-auto md:mx-0">
-                    <a href="/edit-profile" class="profile-btn">Edit Profile</a>
-                </div>
-                <div class="w-full md:w-2/3 profile-info">
-                    <ul>
-                        <li><strong>Name:</strong> {{ Auth::user()->name }}</li>
-                        <li><strong>Email:</strong> {{ Auth::user()->email }}</li>
-                    </ul>
-                </div>
+        <h1 class="text-3xl font-bold mb-6">My Profile</h1>
+
+        <div class="flex flex-col md:flex-row gap-4">
+            <div class="w-full md:w-1/3">
+                <img src="{{ asset('images/profile.jpg') }}" alt="Profile Picture" class="rounded-lg mb-4">
+
+                <a href="/edit-profile"
+                    class="inline-block px-4 py-2 bg-[#2E3D2A] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700">Edit
+                    Profile</a>
             </div>
-            <div class="mt-6 text-center md:text-left">
-                <a href="/delete-user" class="delete-btn" onclick="return confirm('Are you sure you want to delete your account?');">Delete User</a>
+
+            <div class="w-full md:w-2/3 space-y-2">
+                <div><strong>Name:</strong> {{ Auth::user()->name }}</div>
+                <div><strong>Email:</strong> {{ Auth::user()->email }}</div>
+                <div><strong>Address:</strong> {{ Auth::user()->address }}</div>
+            </div>
+            <div class="w-full md:w-1/3">
+                <a href="/delete-user"
+                    class="inline-block px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700"
+                    onclick="showDeleteConfirmation()">Delete User</a>
             </div>
         </div>
+
+        <!-- Reporting Form -->
+        <div class="mt-8">
+            <h1 class="text-3xl font-bold mb-6">Report an Issue</h1>
+
+            @if(session('success'))
+                <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+                    <strong class="font-bold">Success!</strong>
+                    <span class="block sm:inline">{{ session('success') }}</span>
+                    <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
+                        <svg class="fill-current h-6 w-6 text-green-500" role="button" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M14.348 14.849l-3.998-3.999 3.998-3.999L13.636 6l-3.998 3.999L5.64 6l-.707.707 3.998 3.999-3.998 3.999.707.707 3.998-3.999 3.998 3.999z" />
+                        </svg>
+                    </span>
+                </div>
+            @endif
+
+            <form action="{{ route('report.store') }}" method="POST" class="mt-4">
+                @csrf
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-bold mb-2">Name:</label>
+                    <input type="text" name="name" id="name" required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 font-bold mb-2">Email:</label>
+                    <input type="email" name="email" id="email" required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 font-bold mb-2">Message:</label>
+                    <textarea name="message" id="message" required
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div class="mb-4">
+                    <button type="submit"
+                        class="bg-[#2E3D2A] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit
+                        Report</button>
+                </div>
+            </form>
+        </div>
     </div>
+    @endsection
 </body>
 
 </html>
-@endsection

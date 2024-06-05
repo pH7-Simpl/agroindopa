@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ReportController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -20,6 +21,8 @@ Route::get('/delete-user', function () {
 });
 
 Route::post('/delete-user', 'UserController@deleteUser')->middleware('auth');
+
+Route::post('/report', [ReportController::class, 'store'])->name('report.store');
 
 Route::get('/contact', function () {
     return view('contact-us');
