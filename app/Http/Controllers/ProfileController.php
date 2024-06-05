@@ -58,6 +58,12 @@ class ProfileController extends Controller
         return Redirect::to('/');
     }
 
+    public function editProfile()
+    {
+        $user = Auth::user();
+        return view('profile.edit', compact('user'));
+    }
+
     public function deleteUser(Request $request)
     {
         // Check user authentication (already ensured by middleware)
