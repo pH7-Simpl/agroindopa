@@ -39,7 +39,7 @@
 
             <div class="flex gap-2 items-center justify-end cursor-pointer" onclick="toggleDropdown()">
                 <div class="flex flex-col">
-                    <p class="font-bold">Mr. X</p>
+                    <p class="font-bold">{{ Auth::user()->name }}</p>
                 </div>
                 <i data-lucide="chevron-down"></i>
                 <div id="dropdown"
