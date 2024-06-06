@@ -106,7 +106,7 @@
                             <!-- Tambahkan baris pesanan lainnya di sini -->
                             <tr>
                                 <td colspan="2" class="py-2 px-4 text-right font-bold">Total</td>
-                                <td class="py-2 px-4 border-b font-bold">$ 50</td>
+                                <td class="py-2 px-4 border-b font-bold">$0</td>
                             </tr>
                         </tbody>
                     </table>
