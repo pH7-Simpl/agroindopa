@@ -61,7 +61,8 @@
                 </div>
             @endif
 
-            <form id="reportForm" class="mt-4">
+            <form class="mt-4" action="{{ route('report.store') }}" method="POST" class="mt-4">
+                @csrf
                 <div class="mb-4">
                     <label for="name" class="block text-gray-700 font-bold mb-2">Name:</label>
                     <input type="text" name="name" id="name" required
@@ -86,7 +87,7 @@
         </div>
     </div>
     @endsection
-    <script>
+    {{-- <script>
         document.getElementById('reportForm').addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent form submission
 
@@ -99,11 +100,8 @@
             const subject = encodeURIComponent('Report from ' + name);
             const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
             const mailtoLink = `mailto:agroindomlg@gmail.com?subject=${subject}&body=${body}`;
-
-            // Open the mailto link
-            window.location.href = mailtoLink;
         });
-    </script>
+    </script> --}}
 </body>
 
 

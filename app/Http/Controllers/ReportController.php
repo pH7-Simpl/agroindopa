@@ -19,4 +19,10 @@ class ReportController extends Controller
 
         return back()->with('success', 'Report submitted successfully.');
     }
+    public function delete($id)
+    {
+        $report = Report::findOrFail($id); 
+        $report->delete();                  
+        return redirect('dashboard')->with('success', 'Report deleted successfully.');
+    }
 }

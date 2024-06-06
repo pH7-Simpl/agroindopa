@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReportController;
+use App\Models\Report;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,7 +23,9 @@ Route::get('/delete-user', function () {
 
 Route::post('/delete-user', 'UserController@deleteUser')->middleware('auth');
 
-Route::post('/report', [ReportController::class, 'store'])->name('report.store');
+Route::post('/profil', [ReportController::class, 'store'])->name('report.store');
+
+Route::get('/report/{id}', [ReportController::class, 'delete']);
 
 Route::get('/contact', function () {
     return view('contact-us');
@@ -37,7 +40,9 @@ Route::get('/order-list', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $reports = Report::all();
+    // Pass reports to the view (using `with`)
+    return view('dashboard')->with('reports', $reports);
 })->name('dashboard');
 
 Route::get('/order-confirmation', function () {
@@ -53,9 +58,6 @@ Route::get('/contact-us', function () {
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    });
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
