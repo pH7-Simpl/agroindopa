@@ -19,6 +19,10 @@ Route::get('/edit-profile', function () {
     return view('profile.edit');
 });
 
+Route::get('/update-password', function () {
+    return view('profile/partials/update-password-form');
+});
+
 Route::get('/delete-user', function () {
     return view('profile/partials/delete-user-form');
 });

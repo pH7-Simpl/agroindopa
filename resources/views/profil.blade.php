@@ -24,10 +24,10 @@
 
         <div class="flex flex-col md:flex-row gap-4">
             <div class="w-full md:w-1/3">
-                <img src="{{ asset('images/profile.jpg') }}" alt="Profile Picture" class="rounded-lg mb-4">
+                <img src="/assets/profile.jpg"  alt="Profile Picture" class="rounded-lg mb-4">
 
                 <a href="/edit-profile"
-                    class="inline-block px-4 py-2 bg-[#2E3D2A] text-white font-semibold rounded-lg shadow-md hover:bg-blue-700">Edit
+                    class="inline-block px-4 py-2 bg-[#2E3D2A] text-white font-semibold rounded-lg shadow-md mb-2 hover:bg-blue-700">Edit
                     Profile</a>
             </div>
 
@@ -36,12 +36,17 @@
                 <div><strong>Email:</strong> {{ Auth::user()->email }}</div>
                 <div><strong>Address:</strong> {{ Auth::user()->address }}</div>
             </div>
-            <div class="w-full md:w-1/3">
+            </div>
+            <div class="w-full md:w-1/3 mb-2">
+                <a href="/update-password"
+                    class="inline-block px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700"
+                    onclick="showDeleteConfirmation()">Change Password</a>
+            </div>
+            <div class="w-full md:w-1/3 mb-2">
                 <a href="/delete-user"
                     class="inline-block px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700"
                     onclick="showDeleteConfirmation()">Delete User</a>
             </div>
-        </div>
 
         <!-- Reporting Form -->
         <div class="mt-8">
