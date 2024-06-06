@@ -10,7 +10,7 @@ Route::get('/', function () {
 
 Route::get('/profil', function () {
     return view('profil');
-});
+})->name('profil');
 
 Route::get('/edit-profile', function () {
     return view('profile.edit');
