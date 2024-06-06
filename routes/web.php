@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 use App\Http\Controllers\ReportController;
 use App\Models\Report;
+use Illuminate\Support\Facades\Log; 
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,7 +39,7 @@ Route::get('/home', function () {
 
 Route::get('/order-list', function () {
     return view('order-list');
-});
+})->name('order-list');
 
 Route::get('/dashboard', function () {
     $reports = Report::all();
@@ -45,9 +47,12 @@ Route::get('/dashboard', function () {
     return view('dashboard')->with('reports', $reports);
 })->name('dashboard');
 
-Route::get('/order-confirmation', function () {
-    return view('order-confirm');
-});
+Route::post('/order-confirmation', function (Request $request) {
+    \Log::info('ambalakatum'.$request->input('orderData'));
+    $orderData = $request->input('orderData');
+    $data = json_decode($orderData, true);
+    return view('order-confirm')->with('data', $data);
+})->name('order-confirmation');
 
 Route::get('/contact-us', function () {
     return view('contact-us-login');
