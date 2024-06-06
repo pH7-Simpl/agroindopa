@@ -48,7 +48,7 @@
                     <span class="">${{ $data[0] + $data[0]/10 }}</span>
                 </div>
                 <div class="flex items-center justify-center">
-                    <a href="https://wa.me/6282337458131?text=Hi,20%i20%want20%to20%buy." class="mt-4 px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-500">Payment Via Admin</a>
+                    <a href="https://wa.me/6282337458131?text=Hi,20%i20%want20%to20%pay%20${{ $data[0] + $data[0]/10 }}." class="mt-4 px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-500">Payment Via Admin</a>
                 </div>
             </div>
 
