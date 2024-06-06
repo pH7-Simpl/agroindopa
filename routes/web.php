@@ -38,7 +38,7 @@ Route::get('/order-list', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard');
-});
+})->name('dashboard');
 
 Route::get('/order-confirmation', function () {
     return view('order-confirm');
