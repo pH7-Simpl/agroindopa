@@ -158,7 +158,7 @@
     </div>
 
     <script>
-        const prices = { quantity1: 22, quantity2: 21, quantity3: 24, quantity4: 18, quantity5: 23,quantity6: 17, quantity7: 19};
+        const prices = { quantity1: 22, quantity2: 21, quantity3: 24, quantity4: 18, quantity5: 23,quantity6: 17, quantity7: 18};
 
         function increaseQuantity(id) {
             const input = document.getElementById(id);

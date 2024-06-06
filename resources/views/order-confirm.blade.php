@@ -29,10 +29,11 @@
                 <p class="">123 Main Street</p>
                 <p class="">Anytown, USA</p>
                 <p class="">12345</p>
-                <button class="absolute mt-4 px-6 py-2 bg-white text-black font-semibold rounded-lg ">Change
-                    Address</button>
-
-            </div>
+                <div class="flex items-center justify-center">
+                    <a href="/profil" class="mt-4 px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-500">Change
+                        Address</a>
+                    </div>
+                </div>
 
             <!-- Shopping Summary Card -->
             <div class="bg-[#2E3D2A] shadow-md rounded-md p-6 text-white">
@@ -50,8 +51,7 @@
                     <span class="">$55.00</span>
                 </div>
                 <div class="flex items-center justify-center">
-                    <button class="mt-4 px-6 py-2 bg-white text-black font-semibold rounded-lg">Select
-                        Payment</button>
+                    <a href="https://wa.me/6282337458131?text=Hi,20%i20%want20%to20%buy." class="mt-4 px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-500">Payment Via Admin</a>
                 </div>
             </div>
 
@@ -71,6 +71,25 @@
                 <!-- Add more shopping details here -->
             </ul>
         </div>
+        <!-- <div class="bg-[#2E3D2A] shadow-md rounded-md p-6 col-span-2 mt-6 text-white">
+            <h2 class="text-lg font-semibold mb-4">Payment Selection</h2>
+            <div class="flex justify-between mb-2">
+                <div>
+                    <span class="text-left">Visa</span>
+                </div>
+                <div>
+                Total Payment : $50.00
+                </div>
+            </div>
+            <div class="flex justify-between mb-2">
+                <div>
+                    <span class="text-left">Paypal</span>
+                </div>
+                <div>
+                    <button class="mt-4 px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-500">Pay</button>
+                </div>
+            </div>            
+        </div> -->
     </div>
     @endsection
 </body>
