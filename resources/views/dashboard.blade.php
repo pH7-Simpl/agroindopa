@@ -69,14 +69,39 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="py-2 px-4 border-b">Produk A</td>
-                                <td class="py-2 px-4 border-b">2</td>
-                                <td class="py-2 px-4 border-b">$ 25</td>
+                                <td class="py-2 px-4 border-b">KONJAC</td>
+                                <td class="py-2 px-4 border-b">0</td>
+                                <td class="py-2 px-4 border-b">$0</td>
                             </tr>
                             <tr>
-                                <td class="py-2 px-4 border-b">Produk B</td>
-                                <td class="py-2 px-4 border-b">1</td>
-                                <td class="py-2 px-4 border-b">$ 25</td>
+                                <td class="py-2 px-4 border-b">TURMERIC</td>
+                                <td class="py-2 px-4 border-b">0</td>
+                                <td class="py-2 px-4 border-b">$0</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">GIANT GINGER</td>
+                                <td class="py-2 px-4 border-b">0</td>
+                                <td class="py-2 px-4 border-b">$0</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">CURCUMA</td>
+                                <td class="py-2 px-4 border-b">0</td>
+                                <td class="py-2 px-4 border-b">$0</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">COFFEE BEAN</td>
+                                <td class="py-2 px-4 border-b">0</td>
+                                <td class="py-2 px-4 border-b">$0</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">BANANA FLOUR</td>
+                                <td class="py-2 px-4 border-b">0</td>
+                                <td class="py-2 px-4 border-b">$0</td>
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b">BANANA LEAF</td>
+                                <td class="py-2 px-4 border-b">0</td>
+                                <td class="py-2 px-4 border-b">$0</td>
                             </tr>
                             <!-- Tambahkan baris pesanan lainnya di sini -->
                             <tr>

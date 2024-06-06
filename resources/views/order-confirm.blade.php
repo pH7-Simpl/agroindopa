@@ -77,25 +77,6 @@
                 <h1>Tidak ada produk yang dibeli!</h1>
             @endif
         </div>
-        <!-- <div class="bg-[#2E3D2A] shadow-md rounded-md p-6 col-span-2 mt-6 text-white">
-            <h2 class="text-lg font-semibold mb-4">Payment Selection</h2>
-            <div class="flex justify-between mb-2">
-                <div>
-                    <span class="text-left">Visa</span>
-                </div>
-                <div>
-                Total Payment : $50.00
-                </div>
-            </div>
-            <div class="flex justify-between mb-2">
-                <div>
-                    <span class="text-left">Paypal</span>
-                </div>
-                <div>
-                    <button class="mt-4 px-6 py-2 bg-white text-black font-semibold rounded-lg hover:bg-gray-500">Pay</button>
-                </div>
-            </div>            
-        </div> -->
     </div>
     @endsection
 </body>
