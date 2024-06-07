@@ -66,7 +66,9 @@
                 <img src="/assets/Maps3.png" alt="Agroindo Address" style="width: 70%">
             </a>
             <div class="flex gap-6 justify-center items-center mb-6">
-                <div class="card">
+                <a href="mailto:agroindomlg@gmail.com?
+                            &subject=Buying Something
+                            &body=I want to buy something." class="card">
                     <div class="gap-6 flex flex-col items-center">
                         <i data-lucide="mail" class="size-16"></i>
                         <div class="flex flex-col items-center">
@@ -74,8 +76,8 @@
                             <span class="text-sm text-black dark:text-black">agroindomlg@gmail.com</span>
                         </div>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="https://t.me/6282337458131?text=Hi,20%i20%want20%to20%buy." class="card">
                     <div class="gap-6 flex flex-col items-center">
                         <i class="fa fa-telegram" style="font-size:64px"></i>
                         <div class="flex flex-col items-center">
@@ -83,8 +85,8 @@
                             <span class="text-sm text-black dark:text-black">+62 823-3745-8131</span>
                         </div>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="https://instagram.com/agroindo.id" class="card">
                     <div class="gap-6 flex flex-col items-center">
                         <i class="fa fa-instagram" style="font-size:64px"></i>
                         <div class="flex flex-col items-center">
@@ -92,8 +94,8 @@
                             <span class="text-sm text-black dark:text-black">@agroindo.id</span>
                         </div>
                     </div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="https://wa.me/6282337458131?text=Hi,20%i20%want20%to20%buy." class="card">
                     <div class="gap-6 flex flex-col items-center">
                         <i class="fa fa-whatsapp" style="font-size:64px"></i>
                         <div class="flex flex-col items-center">
@@ -101,7 +103,7 @@
                             <span class="text-sm text-black dark:text-black">+62 823-3745-8131</span>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
     </div>
 
